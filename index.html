@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Reinigung Freiburg | Saubere Wohnung, Glückliche Gäste</title>
+    <meta name="description" content="Zuverlässige Airbnb-Reinigung in Freiburg von einem Gastgeber für Gastgeber. Professionell, flexibel, pünktlich.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-cream: #FDF8F3;
+            --color-warm-white: #FFFCF9;
+            --color-terracotta: #C4684A;
+            --color-terracotta-light: #E8A08C;
+            --color-forest: #2D4A3E;
+            --color-forest-light: #3D6352;
+            --color-charcoal: #2C2C2C;
+            --color-warm-gray: #6B6560;
+            --color-light-gray: #E8E4DF;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Decorative Elements */
+        .decorative-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a5f7a, #2d8bba);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(196, 104, 74, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 3rem 4rem 8%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-warm-white);
+            border: 1px solid var(--color-light-gray);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1a5f7a;
+            width: fit-content;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #2d8bba;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        .hero h1 span {
+            color: #2d8bba;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--color-warm-gray);
+            max-width: 480px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2d8bba 0%, #3d9dc9 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(26, 95, 122, 0.3);
+        }
+
+        .btn-primary svg {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover svg {
+            transform: translateX(4px);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            animation: fadeInRight 1s ease-out 0.4s both;
+        }
+
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #7dd3e8;
+            border-radius: 20px;
+            z-index: 0;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .main-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .image-icon {
+            color: white;
+            opacity: 0.9;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            border-radius: 16px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            z-index: 2;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-card.reviews {
+            bottom: 60px;
+            left: -30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stars {
+            color: #F59E0B;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 0.85rem;
+            color: var(--color-warm-gray);
+        }
+
+        .review-text strong {
+            color: var(--color-charcoal);
+            display: block;
+        }
+
+        .floating-card.experience {
+            top: 40px;
+            right: -20px;
+            text-align: center;
+            animation-delay: -3s;
+        }
+
+        .experience-number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: #2d8bba;
+            line-height: 1;
+        }
+
+        .experience-text {
+            font-size: 0.8rem;
+            color: var(--color-warm-gray);
+            margin-top: 4px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Trust Indicators */
+        .trust-bar {
+            background: var(--color-warm-white);
+            border-top: 1px solid var(--color-light-gray);
+            border-bottom: 1px solid var(--color-light-gray);
+            padding: 2rem 8%;
+        }
+
+        .trust-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-cream);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d8bba;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
+            color: var(--color-warm-gray);
+        }
+
+        .trust-text strong {
+            display: block;
+            color: var(--color-charcoal);
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 8%;
+            background: linear-gradient(180deg, #e8f4fc 0%, #d0ebf7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                /* Large droplet */
+                radial-gradient(ellipse 30px 40px at 15% 20%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 30%, rgba(173,216,230,0.3) 60%, transparent 70%),
+                radial-gradient(ellipse 8px 10px at 13% 15%, rgba(255,255,255,0.95) 0%, transparent 70%),
+                /* Medium droplet */
+                radial-gradient(ellipse 22px 30px at 85% 35%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.5) 30%, rgba(173,216,230,0.25) 60%, transparent 70%),
+                radial-gradient(ellipse 6px 8px at 83% 31%, rgba(255,255,255,0.9) 0%, transparent 70%),
+                /* Small droplet */
+                radial-gradient(ellipse 15px 20px at 45% 75%, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 30%, rgba(173,216,230,0.2) 60%, transparent 70%),
+                radial-gradient(ellipse 4px 5px at 43% 72%, rgba(255,255,255,0.9) 0%, transparent 70%),
+                /* Tiny droplets */
+                radial-gradient(ellipse 10px 14px at 70% 15%, rgba(255,255,255,0.75) 0%, rgba(173,216,230,0.2) 50%, transparent 70%),
+                radial-gradient(ellipse 12px 16px at 25% 55%, rgba(255,255,255,0.7) 0%, rgba(173,216,230,0.15) 50%, transparent 70%),
+                radial-gradient(ellipse 8px 11px at 92% 70%, rgba(255,255,255,0.7) 0%, rgba(173,216,230,0.15) 50%, transparent 70%),
+                radial-gradient(ellipse 14px 18px at 8% 85%, rgba(255,255,255,0.75) 0%, rgba(173,216,230,0.2) 50%, transparent 70%),
+                radial-gradient(ellipse 10px 13px at 55% 25%, rgba(255,255,255,0.7) 0%, rgba(173,216,230,0.15) 50%, transparent 70%),
+                radial-gradient(ellipse 16px 22px at 78% 88%, rgba(255,255,255,0.8) 0%, rgba(173,216,230,0.2) 50%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .services::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(135, 206, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(173, 216, 230, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .services .section-header,
+        .services .services-grid {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2d8bba;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-warm-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 8px 32px rgba(31, 38, 135, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.9);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1a5f7a, #2d8bba);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+            border-radius: 20px 20px 0 0;
+            pointer-events: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card p {
+            color: var(--color-warm-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .check-icon {
+            color: #2d8bba;
+            flex-shrink: 0;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 8%;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                /* Large 3D droplet */
+                radial-gradient(ellipse 35px 45px at 12% 25%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 40%, rgba(125,211,232,0.1) 60%, transparent 70%),
+                radial-gradient(ellipse 10px 12px at 10% 20%, rgba(255,255,255,0.4) 0%, transparent 70%),
+                /* Medium 3D droplet */
+                radial-gradient(ellipse 28px 36px at 88% 40%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.08) 40%, rgba(125,211,232,0.08) 60%, transparent 70%),
+                radial-gradient(ellipse 8px 10px at 86% 35%, rgba(255,255,255,0.35) 0%, transparent 70%),
+                /* Small 3D droplet */
+                radial-gradient(ellipse 20px 26px at 50% 80%, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 40%, rgba(125,211,232,0.06) 60%, transparent 70%),
+                radial-gradient(ellipse 5px 6px at 48% 76%, rgba(255,255,255,0.3) 0%, transparent 70%),
+                /* Tiny droplets */
+                radial-gradient(ellipse 14px 18px at 75% 18%, rgba(255,255,255,0.15) 0%, rgba(125,211,232,0.05) 50%, transparent 70%),
+                radial-gradient(ellipse 16px 21px at 22% 60%, rgba(255,255,255,0.12) 0%, rgba(125,211,232,0.04) 50%, transparent 70%),
+                radial-gradient(ellipse 12px 15px at 95% 75%, rgba(255,255,255,0.14) 0%, rgba(125,211,232,0.05) 50%, transparent 70%),
+                radial-gradient(ellipse 18px 24px at 5% 90%, rgba(255,255,255,0.16) 0%, rgba(125,211,232,0.05) 50%, transparent 70%),
+                radial-gradient(ellipse 13px 17px at 60% 30%, rgba(255,255,255,0.13) 0%, rgba(125,211,232,0.04) 50%, transparent 70%),
+                radial-gradient(ellipse 22px 28px at 82% 92%, rgba(255,255,255,0.18) 0%, rgba(125,211,232,0.06) 50%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #1a5f7a 0%, #3d9dc9 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-quote {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            max-width: 280px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-quote p {
+            font-style: italic;
+            color: var(--color-charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .about-quote cite {
+            display: block;
+            margin-top: 0.75rem;
+            font-style: normal;
+            font-weight: 600;
+            color: #2d8bba;
+            font-size: 0.85rem;
+        }
+
+        .about-text {
+            color: white;
+        }
+
+        .about-text .section-tag {
+            color: #7dd3e8;
+        }
+
+        .about-text .section-title {
+            color: white;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2.5rem;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: #7dd3e8;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.5rem;
+        }
+
+        .stat-footnote {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .stat-footnote a {
+            color: #7dd3e8;
+            text-decoration: none;
+        }
+
+        .stat-footnote a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 8%;
+            background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 50%, #e0f7fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 400px 300px at 20% 30%, rgba(255, 255, 255, 0.7) 0%, transparent 60%),
+                radial-gradient(ellipse 350px 250px at 80% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
+                radial-gradient(ellipse 300px 400px at 60% 20%, rgba(224, 247, 250, 0.5) 0%, transparent 50%);
+            filter: blur(40px);
+            pointer-events: none;
+        }
+
+        .pricing::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(125deg, rgba(255,255,255,0.4) 0%, transparent 40%),
+                linear-gradient(245deg, rgba(255,255,255,0.3) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .pricing .section-header,
+        .pricing .pricing-grid {
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 
+                0 8px 32px rgba(31, 38, 135, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.9),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 100%);
+            border-radius: 24px 24px 0 0;
+            pointer-events: none;
+        }
+
+        .price-card.featured {
+            border-color: #2d8bba;
+            transform: scale(1.05);
+        }
+
+        .price-card.featured::before {
+            content: 'Beliebt';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .price-card:hover {
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .price-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-description {
+            color: var(--color-warm-gray);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-amount {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-value {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--color-charcoal);
+        }
+
+        .price-value span {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-warm-gray);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--color-warm-gray);
+        }
+
+        .price-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-light-gray);
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 8%;
+            background: linear-gradient(180deg, #bae6fd 0%, #a5d8f3 50%, #c7ecf7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 500px 350px at 70% 20%, rgba(255, 255, 255, 0.75) 0%, transparent 60%),
+                radial-gradient(ellipse 400px 300px at 30% 80%, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+            filter: blur(50px);
+            pointer-events: none;
+        }
+
+        .contact::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.35) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact .contact-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: var(--color-warm-gray);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 
+                0 4px 24px rgba(31, 38, 135, 0.08),
+                inset 0 1px 1px rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            border-color: #2d8bba;
+            transform: translateX(8px);
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8bba 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-method.whatsapp .contact-method-icon {
+            background: #25D366;
+        }
+
+        .contact-method-text {
+            flex: 1;
+        }
+
+        .contact-method-label {
+            font-size: 0.85rem;
+            color: var(--color-warm-gray);
+        }
+
+        .contact-method-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-charcoal);
+            color: white;
+            padding: 3rem 8%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-location {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 6rem 5% 3rem;
+                text-align: center;
+            }
+
+            .badge {
+                margin: 0 auto 2rem;
+            }
+
+            .hero-description {
+                margin: 0 auto 2.5rem;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-image {
+                padding: 2rem 5% 4rem;
+            }
+
+            .image-container::before {
+                display: none;
+            }
+
+            .floating-card.reviews {
+                left: 10px;
+                bottom: 30px;
+            }
+
+            .floating-card.experience {
+                right: 10px;
+                top: 20px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-text .section-title {
+                text-align: center;
+            }
+
+            .about-stats {
+                justify-content: center;
+            }
+
+            .about-quote {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin: 2rem auto 0;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card.featured {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .trust-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .trust-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .about-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .stat {
+                text-align: center;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Verfügbar in Freiburg & Umgebung
+            </div>
+            <h1>Saubere Wohnung,<br><span>glückliche Gäste</span></h1>
+            <p class="hero-description">
+                Professionelle Airbnb-Reinigung von einem Gastgeber, der weiß worauf es ankommt. 
+                Zuverlässig, gründlich, und genau so wie Sie es sich wünschen.
+            </p>
+            <div class="hero-cta">
+                <a href="https://wa.me/49XXXXXXXXXXX" class="btn-primary">
+                    Jetzt anfragen
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-container">
+                <div class="main-image">
+                    <svg class="image-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="floating-card reviews">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">
+                        <strong>5.0 Bewertung</strong>
+                        von zufriedenen Gastgebern
+                    </div>
+                </div>
+                <div class="floating-card experience">
+                    <div class="experience-number">3+</div>
+                    <div class="experience-text">Jahre Erfahrung<br>als Airbnb Host</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="trust-content">
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <strong>Zuverlässig</strong>
+                    Immer pünktlich
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <strong>Flexibel</strong>
+                    Auch kurzfristig
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <strong>Vertrauenswürdig</strong>
+                    Selbst Airbnb Gastgeber
+                </div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </div>
+                <div class="trust-text">
+                    <strong>Mit Liebe</strong>
+                    Zum Detail
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <p class="section-tag">Leistungen</p>
+            <h2 class="section-title">Was ich für Sie übernehme</h2>
+            <p class="section-subtitle">
+                Alles was Ihre Wohnung braucht, um Gäste zu begeistern – 
+                professionell und nach Ihren Wünschen.
+            </p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                </div>
+                <h3>Standard Reinigung</h3>
+                <p>Die komplette Reinigung Ihrer Airbnb-Wohnung nach jedem Gast – gründlich und effizient.</p>
+                <ul class="service-features">
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Alle Räume staubsaugen & wischen
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Bad & Küche gründlich reinigen
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Oberflächen abwischen
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Müll entsorgen
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"></path>
+                    </svg>
+                </div>
+                <h3>Wäsche-Service</h3>
+                <p>Frische Bettwäsche und Handtücher für jeden Gast – professionell gewaschen und gefaltet.</p>
+                <ul class="service-features">
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Bettwäsche wechseln
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Handtücher Hotel-Style falten
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Waschen & Bügeln möglich
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Ihr Wäschevorrat oder meiner
+                    </li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                </div>
+                <h3>Premium Extras</h3>
+                <p>Der besondere Touch für 5-Sterne Bewertungen – kleine Details mit großer Wirkung.</p>
+                <ul class="service-features">
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Willkommensgruß aufstellen
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Verbrauchsmaterial auffüllen
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Kühlschrank-Check
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Foto-Bestätigung per WhatsApp
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <div class="about-image">
+                <div class="about-photo">
+                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="about-quote">
+                    <p>„Ich weiß genau, wie wichtig 5-Sterne-Bewertungen sind – weil ich selbst als Gastgeber davon abhänge."</p>
+                    <cite>— Ihr Name</cite>
+                </div>
+            </div>
+            <div class="about-text">
+                <p class="section-tag">Über mich</p>
+                <h2 class="section-title">Von Gastgeber zu Gastgeber</h2>
+                <p>
+                    Als Airbnb-Gastgeber seit 2023 in Schonach kenne ich die Herausforderungen 
+                    aus eigener Erfahrung. Die kurzfristigen Buchungen, der Zeitdruck zwischen 
+                    Check-out und Check-in, die hohen Erwartungen der Gäste.
+                </p>
+                <p>
+                    Deshalb biete ich anderen Gastgebern genau den Service an, den ich mir selbst 
+                    immer gewünscht habe: Zuverlässig, flexibel, und mit dem Blick fürs Detail, 
+                    der den Unterschied macht.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">5+*</div>
+                        <div class="stat-label">Reinigungen/Jahr</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%*</div>
+                        <div class="stat-label">Zufriedenheit</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1 Tag</div>
+                        <div class="stat-label">Vorlauf genügt</div>
+                    </div>
+                </div>
+                <p class="stat-footnote">* <a href="https://www.airbnb.de/rooms/946169979289912332?source_impression_id=p3_1769174533_P3yM8FHzqkDlpsYx" target="_blank" rel="noopener">Kieran's Airbnb Wohnung in Schonach</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="section-header">
+            <p class="section-tag">Preise</p>
+            <h2 class="section-title">Transparente Preisgestaltung</h2>
+            <p class="section-subtitle">
+                Faire Preise ohne versteckte Kosten. 
+                Individuelle Pakete auf Anfrage.
+            </p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3 class="price-title">Basis</h3>
+                <p class="price-description">Für kleine Wohnungen bis 50m²</p>
+                <div class="price-amount">
+                    <span class="price-value">ab 45€</span>
+                    <p class="price-note">pro Reinigung</p>
+                </div>
+                <ul class="price-features">
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Standard Reinigung
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Bad & Küche
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Bettwäsche wechseln
+                    </li>
+                </ul>
+                <a href="https://wa.me/49XXXXXXXXXXX" class="btn-primary" style="width: 100%; justify-content: center;">Anfragen</a>
+            </div>
+            <div class="price-card featured">
+                <h3 class="price-title">Komplett</h3>
+                <p class="price-description">Für Wohnungen 50-80m²</p>
+                <div class="price-amount">
+                    <span class="price-value">ab 65€</span>
+                    <p class="price-note">pro Reinigung</p>
+                </div>
+                <ul class="price-features">
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Alles aus Basis
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Wäsche-Service inklusive
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Foto-Bestätigung
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Auffüllen von Basics
+                    </li>
+                </ul>
+                <a href="https://wa.me/49XXXXXXXXXXX" class="btn-primary" style="width: 100%; justify-content: center;">Anfragen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Jetzt Kontakt aufnehmen</h2>
+                <p>
+                    Rufen Sie mich einfach an oder schreiben Sie mir per WhatsApp – 
+                    ich melde mich schnellstmöglich zurück.
+                </p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/49XXXXXXXXXXX" class="contact-method whatsapp">
+                        <div class="contact-method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-method-text">
+                            <span class="contact-method-label">WhatsApp (bevorzugt)</span>
+                            <span class="contact-method-value">+49 XXX XXXXXXX</span>
+                        </div>
+                    </a>
+                    <a href="tel:+49XXXXXXXXXXX" class="contact-method">
+                        <div class="contact-method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-method-text">
+                            <span class="contact-method-label">Telefon</span>
+                            <span class="contact-method-value">+49 XXX XXXXXXX</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Sauber & Zuverlässig</div>
+            <p>Airbnb Reinigungsservice in Freiburg</p>
+            <p class="footer-location">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Freiburg im Breisgau & Umgebung
+            </p>
+            <p style="margin-top: 2rem; font-size: 0.8rem;">© 2025 – Alle Rechte vorbehalten</p>
+        </div>
+    </footer>
+</body>
+</html>
